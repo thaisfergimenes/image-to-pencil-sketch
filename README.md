@@ -59,7 +59,7 @@ image-to-pencil-sketch/
 │
 ├── requirements.txt
 └── README.md
-...
+```
 
 ---
 
@@ -68,4 +68,5 @@ image-to-pencil-sketch/
 ```bash
 pip install -r requirements.txt
 python src/sketch.py
+```
 
