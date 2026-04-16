@@ -44,3 +44,18 @@ Explorar transformações em imagens para simular o efeito de sketch, aplicando:
 ---
 
 ## 📁 Estrutura do Projeto
+image-to-pencil-sketch/
+│
+├── images/
+│ ├── input/
+│ │ └── dog.jpg
+│ └── output/
+│ └── pencil_sketch.png
+│
+├── src/
+│ └── sketch.py
+│
+├── requirements.txt
+└── README.md
+
+
