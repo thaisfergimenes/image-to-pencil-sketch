@@ -1,17 +1,18 @@
 # ✏️ Image to Pencil Sketch
 
-Projeto em Python que transforma uma imagem colorida (RGB) em um desenho estilo lápis utilizando técnicas de processamento de imagem com OpenCV.
+Transforma imagens RGB em desenhos estilo lápis utilizando técnicas de processamento de imagem com OpenCV.
 
 ---
 
-## 📌 Objetivo
+## 📌 Overview
 
-Explorar transformações em imagens para simular o efeito de sketch, aplicando:
+Este projeto explora um pipeline de processamento de imagem para simular o efeito de sketch, aplicando transformações clássicas como:
 
-- Conversão para escala de cinza
-- Inversão de imagem
-- Suavização com Gaussian Blur
-- Combinação de imagens via divisão de pixels
+- Conversão para escala de cinza  
+- Inversão de imagem  
+- Suavização com Gaussian Blur  
+- Combinação via divisão de pixels  
+- Realce de contraste com CLAHE  
 
 ---
 
@@ -20,42 +21,51 @@ Explorar transformações em imagens para simular o efeito de sketch, aplicando:
 1. Leitura da imagem RGB  
 2. Conversão para grayscale  
 3. Inversão da imagem  
-4. Aplicação de blur (Gaussian Blur)  
+4. Aplicação de Gaussian Blur  
 5. Inversão da imagem borrada  
-6. Combinação com a imagem original usando divisão  
-7. Geração do efeito de desenho a lápis  
+6. Combinação com a imagem original (dodge blend via divisão)  
+7. Realce de contraste adaptativo (CLAHE)  
+8. Geração do efeito final de desenho a lápis  
 
 ---
 
-## 🖼️ Exemplo de Resultado
+## 🖼️ Resultado
 
-| Original | Sketch |
-|----------|--------|
-| ![Original](images/input/dog.jpg) | ![Sketch](images/output/pencil_sketch.png) |
+![Before and After](images/output/before_after_sketch.png)
 
 ---
 
 ## ⚙️ Tecnologias Utilizadas
 
-- Python
-- OpenCV
-- NumPy
+- Python  
+- OpenCV  
+- NumPy  
 
 ---
 
 ## 📁 Estrutura do Projeto
+```bash
 image-to-pencil-sketch/
 │
 ├── images/
 │ ├── input/
 │ │ └── dog.jpg
 │ └── output/
-│ └── pencil_sketch.png
+│ ├── pencil_sketch.png
+│ └── before_after_sketch.png
 │
 ├── src/
 │ └── sketch.py
 │
 ├── requirements.txt
 └── README.md
+...
 
+---
+
+## 🚀 Como Executar
+
+```bash
+pip install -r requirements.txt
+python src/sketch.py
 
